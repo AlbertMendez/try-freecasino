@@ -324,6 +324,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 24px;
+  overflow: hidden;
 }
 
 .game-thumb.placeholder {
@@ -347,6 +348,19 @@ body {
 .badge.ghost {
   background: rgba(255, 255, 255, 0.08);
   color: #e6d9cf;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  opacity: 0.85;
+}
+
+.game-thumb.placeholder .game-image {
+  opacity: 0.7;
 }
 
 .game-art span {

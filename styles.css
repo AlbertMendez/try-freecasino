@@ -253,6 +253,52 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #ff9f1c;
+}
+
+.icon-muted {
+  color: #ffffffcc;
+}
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.bonus-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(18, 15, 14, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.bonus-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 159, 28, 0.15);
+}
+
+.bonus-card h4 {
+  font-size: 1rem;
+}
+
+.bonus-card p {
+  color: #d6c6bb;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
 .game-card {
   background: rgba(18, 15, 14, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -278,6 +324,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 24px;
+  overflow: hidden;
 }
 
 .game-thumb.placeholder {
@@ -301,6 +348,19 @@ body {
 .badge.ghost {
   background: rgba(255, 255, 255, 0.08);
   color: #e6d9cf;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  opacity: 0.85;
+}
+
+.game-thumb.placeholder .game-image {
+  opacity: 0.7;
 }
 
 .game-art span {

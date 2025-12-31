@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreeCasino - Acceso</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="brand">
+          <span class="chip">FREECASINO</span>
+          <h1>Bienvenido a tu casino personal</h1>
+          <p>
+            Empieza con un acceso seguro para tu experiencia tipo Chicken Road.
+            Crea tu cuenta o ingresa con tus credenciales.
+          </p>
+          <div class="feature-list">
+            <div>
+              <span class="dot"></span>
+              Diseño oscuro con acentos naranjas.
+            </div>
+            <div>
+              <span class="dot"></span>
+              Formularios listos para conectar a tu backend.
+            </div>
+            <div>
+              <span class="dot"></span>
+              UI flexible para futuras pantallas de juego.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="tabs" role="tablist" aria-label="Acceso">
+          <button class="tab active" role="tab" aria-selected="true" data-target="login">
+            Iniciar sesión
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-target="register">
+            Crear cuenta
+          </button>
+        </div>
+
+        <form class="panel active" id="login" data-panel>
+          <label class="field">
+            Correo electrónico
+            <input type="email" placeholder="tucorreo@ejemplo.com" required />
+          </label>
+          <label class="field">
+            Contraseña
+            <input type="password" placeholder="••••••••" required />
+          </label>
+          <div class="row">
+            <label class="checkbox">
+              <input type="checkbox" />
+              Recordarme
+            </label>
+            <button type="button" class="link">¿Olvidaste tu clave?</button>
+          </div>
+          <button class="primary" type="submit">Entrar</button>
+        </form>
+
+        <form class="panel" id="register" data-panel>
+          <label class="field">
+            Nombre de usuario
+            <input type="text" placeholder="ChickenMaster" required />
+          </label>
+          <label class="field">
+            Correo electrónico
+            <input type="email" placeholder="tucorreo@ejemplo.com" required />
+          </label>
+          <label class="field">
+            Contraseña
+            <input type="password" placeholder="Mínimo 8 caracteres" required />
+          </label>
+          <label class="field">
+            Confirmar contraseña
+            <input type="password" placeholder="Repite tu clave" required />
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" required />
+            Acepto los términos de uso personal.
+          </label>
+          <button class="primary" type="submit">Crear cuenta</button>
+        </form>
+
+        <footer class="card-footer">
+          <span>Acceso privado · Uso personal</span>
+          <button class="ghost" type="button">Configurar más tarde</button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

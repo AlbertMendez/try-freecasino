@@ -140,7 +140,7 @@
               niveles, acumula bonos y mantén tu cartera siempre activa.
             </p>
             <div class="welcome-actions">
-              <button class="primary" type="button">Jugar Chicken Road</button>
+              <button class="primary" type="button" data-start-game>Jugar Chicken Road</button>
               <button class="ghost" type="button">Ver misiones</button>
             </div>
           </div>
@@ -152,6 +152,39 @@
             <div class="highlight-card">
               <h3>Misión del día</h3>
               <p>Completa 5 cruces perfectos para ganar 800 fichas.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="game-arena" data-game-section>
+          <header class="game-arena-header">
+            <div>
+              <span class="chip">CHICKEN ROAD</span>
+              <h2>Tu partida gratis está en marcha</h2>
+              <p>
+                Mueve la gallina con las flechas o los botones. Es una ronda libre: no pierdes ni ganas saldo.
+              </p>
+            </div>
+            <div class="game-arena-actions">
+              <button class="primary" type="button" data-game-start>Empezar ronda</button>
+              <button class="ghost" type="button" data-game-reset>Reiniciar posición</button>
+            </div>
+          </header>
+
+          <div class="game-panel">
+            <div class="game-status">
+              <strong data-game-status>Listo para jugar</strong>
+              <span data-game-substatus>Presiona “Empezar ronda” para activar el camino.</span>
+            </div>
+            <div class="game-grid" data-game-grid></div>
+          </div>
+
+          <div class="game-controls">
+            <button class="ghost" type="button" data-move="up">↑</button>
+            <div class="game-controls-row">
+              <button class="ghost" type="button" data-move="left">←</button>
+              <button class="ghost" type="button" data-move="down">↓</button>
+              <button class="ghost" type="button" data-move="right">→</button>
             </div>
           </div>
         </section>
@@ -189,7 +222,7 @@
                   <span>Bonos gratuitos</span>
                 </div>
                 <div class="actions">
-                  <button class="primary" type="button">Jugar ahora</button>
+                  <button class="primary" type="button" data-start-game>Jugar ahora</button>
                   <button class="ghost" type="button">Detalles</button>
                 </div>
               </div>

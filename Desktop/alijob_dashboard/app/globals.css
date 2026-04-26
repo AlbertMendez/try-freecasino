@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-page text-ink font-sans text-base;
+  }
+
+  ::selection {
+    background: rgba(196,104,58,0.15);
+  }
+
+  /* Custom scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #D0CCC6 transparent;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #D0CCC6; border-radius: 3px; }
+}
+
+@layer components {
+  /* ── Buttons ─────────────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 font-semibold cursor-pointer border-none rounded-md transition-all duration-150 ease-in leading-none whitespace-nowrap select-none;
+    letter-spacing: -0.01em;
+  }
+  .btn:disabled { @apply opacity-55 cursor-not-allowed; }
+
+  .btn-sm  { @apply text-xs px-3 py-1.5; }
+  .btn-md  { @apply text-base px-[18px] py-[9px]; }
+  .btn-lg  { @apply text-md px-6 py-3; }
+
+  .btn-primary   { @apply btn btn-md bg-accent text-white hover:bg-accent-hover; }
+  .btn-secondary { @apply btn btn-md bg-card text-ink border border-border shadow-sm hover:bg-page; }
+  .btn-ghost     { @apply btn btn-md bg-transparent text-ink-secondary hover:text-ink hover:bg-page; }
+  .btn-danger    { @apply btn btn-md bg-status-red text-white hover:opacity-90; }
+  .btn-teal      { @apply btn btn-md bg-teal text-white hover:opacity-90; }
+  .btn-dark      { @apply btn btn-md bg-sidebar text-white hover:opacity-90; }
+
+  /* ── Inputs ──────────────────────────────────────────── */
+  .input {
+    @apply w-full px-3 py-[9px] rounded-md border border-landing-border bg-[#FDFCFA] text-base text-ink placeholder:text-ink-muted outline-none font-sans transition-all duration-150;
+    color: #0C1528;
+  }
+  .input:focus {
+    outline: 2px solid #C4683A;
+    outline-offset: 1px;
+  }
+
+  .select {
+    @apply input cursor-pointer;
+  }
+
+  .textarea {
+    @apply input resize-y;
+    line-height: 1.6;
+  }
+
+  /* ── Card ────────────────────────────────────────────── */
+  .card {
+    @apply bg-card border border-border rounded-lg shadow-sm;
+  }
+  .card-hover {
+    @apply card transition-all duration-150 hover:shadow-md hover:-translate-y-px cursor-pointer;
+  }
+
+  /* ── Section label ───────────────────────────────────── */
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-caps text-ink-muted;
+  }
+
+  /* ── Nav item (sidebar) ──────────────────────────────── */
+  .nav-item {
+    @apply flex items-center gap-2.5 w-full px-[18px] py-[9px] text-sm text-[#9A9088] font-normal border-l-2 border-transparent bg-transparent cursor-pointer font-sans transition-all duration-100 text-left;
+    border: none;
+  }
+  .nav-item:hover {
+    @apply text-white bg-sidebar-active;
+  }
+  .nav-item-active {
+    @apply nav-item text-white font-bold bg-sidebar-active border-l-2 border-l-accent;
+    border-left-color: #C4683A;
+  }
+}
+
+/* Landing page specific */
+.landing-hero-gradient {
+  background-image: radial-gradient(circle at 50% 20%, rgba(26,95,160,0.07) 0%, transparent 65%);
+}
